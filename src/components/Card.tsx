@@ -1,7 +1,11 @@
-export const Card = () => {
+type CardProps = {
+  class?: string;
+}
+
+export const Card = (props: CardProps) => {
   return (
     <>
-      <div class="bg-white rounded-md border shadow-sm p-2">
+      <div class={`rounded-md border shadow-sm p-2 ${props.class}`}>
         <div class="p-4 border-b">
           <h1 class="text-xl font-bold">Header</h1>
         </div>
