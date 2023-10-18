@@ -1,6 +1,6 @@
 type CardProps = {
   class?: string;
-}
+};
 
 export const Card = (props: CardProps) => {
   return (

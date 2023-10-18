@@ -1,24 +1,31 @@
-import Card from "~/components/Card";
-import MyBanner from "../assets/banner.png";
-import { Routes, Route, A } from "solid-start";
+import { A } from "solid-start";
+import Counter from "~/components/Counter";
 
-export const App = () => {
+export default function Home() {
   return (
-    <>
-      <section class="container mx-auto">
-        <div class="p-12">
-          <img src={MyBanner} alt="myBannerImage" class="block mb-8" />
-          
-          <div class="flex w-full gap-4 justify-center">
-            <Card class="bg-red-100 w-1/4" />
-            <Card class="bg-blue-300 w-1/4" />
-            <Card class="bg-green-300 w-1/4" />
-            <Card class="bg-pink-300 w-1/4" />
-          </div>
-        </div>
-      </section>
-    </>
+    <main class="text-center mx-auto text-gray-700 p-4">
+      <h1 class="max-6-xs text-6xl text-sky-700 font-thin uppercase my-16">
+        Hello world! 123
+      </h1>
+      <Counter />
+      <p class="mt-8">
+        Visit{" "}
+        <a
+          href="https://solidjs.com"
+          target="_blank"
+          class="text-sky-600 hover:underline"
+        >
+          solidjs.com
+        </a>{" "}
+        to learn how to build Solid apps.
+      </p>
+      <p class="my-4">
+        <span>Home</span>
+        {" - "}
+        <A href="/about" class="text-sky-600 hover:underline">
+          About Page
+        </A>{" "}
+      </p>
+    </main>
   );
-};
-
-export default App;
+}

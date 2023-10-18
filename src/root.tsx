@@ -7,6 +7,8 @@ import {
   Meta,
   Scripts,
   Title,
+  Routes,
+  FileRoutes,
 } from "solid-start";
 import App from "./routes/app";
 import "./styles/root.css";
@@ -25,7 +27,9 @@ export default function Root() {
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Body>
-        <App />
+        <Routes>
+          <FileRoutes />
+        </Routes>
         <Scripts />
       </Body>
     </Html>
